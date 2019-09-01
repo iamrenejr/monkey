@@ -1,0 +1,20 @@
+# This is Git's per-user configuration file.
+[user]
+	name = # Name 
+	email = # Email 
+
+[push]
+	default = current
+
+[alias]
+	a = add
+	f = fetch
+	ps = push
+	pl = pull
+	co = checkout
+	cm = commit --message
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p

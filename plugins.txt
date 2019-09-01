@@ -1,0 +1,15 @@
+ack.vim
+ale
+delimitmate
+fzf.vim
+javascript-libraries-syntax.vim
+lightline.vim
+nerdtree
+vim-commentary
+vim-fugitive
+vim-javascript
+vim-json
+vim-jsx
+vim-surround
+vim-tmux-navigator
+vim-unimpaired
