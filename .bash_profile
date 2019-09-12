@@ -7,6 +7,8 @@ export PATH=$PATH:~/Library/Android/sdk/tools/
 export EDITOR=vim
 export TERM=screen-256color
 
+alias e='exit'
+alias c='clear'
 alias l='ls -llarth'
 alias v='vi'
 alias relb='source ~/.bash_profile'
@@ -18,6 +20,16 @@ alias tm='tmux -u -2'
 alias g='git'
 alias eg='v ~/.gitconfig'
 alias gfp='g f && g pl'
+
+# Android
+alias android_remote_menu='adb shell input keyevent 82'
+
+# Mac: Disable keyboard
+alias disable_keyboard='sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/'
+alias enable_keyboard='sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/'
+
+# fastlane
+alias fl='bundle exec fastlane read_dev_cert'
 
 export NVM_DIR="/Users/jorencalunsag/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
