@@ -7,10 +7,13 @@ export PATH=$PATH:~/Library/Android/sdk/tools/
 export EDITOR=vim
 export TERM=screen-256color
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 alias e='exit'
 alias c='clear'
 alias l='ls -llarth'
-alias v='vi'
+alias v='mvim -v'
 alias relb='source ~/.bash_profile'
 alias eb='v ~/.bash_profile && relb'
 alias ev='v ~/.vimrc'
@@ -20,6 +23,9 @@ alias tm='tmux -u -2'
 alias g='git'
 alias eg='v ~/.gitconfig'
 alias gfp='g f && g pl'
+alias mux='tmuxinator'
+
+alias home='cd ~'
 
 # Android
 alias android_remote_menu='adb shell input keyevent 82'
@@ -59,3 +65,5 @@ if [ -x "$(command -v fzf)" ] && [ -x "$(command -v ag)" ]; then
   --color info:108,prompt:109,spinner:108,pointer:168,marker:168
   '
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"

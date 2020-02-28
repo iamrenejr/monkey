@@ -4,11 +4,33 @@ execute pathogen#infect()
 set number
 set relativenumber
 
+" encoding
+set encoding=UTF-8
+
+" Disable -- INSERT --
+set noshowmode
+
+" Enable true color 启用终端24位色
+if exists('+termguicolors')
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	set termguicolors
+endif
+
+" markdown preview
+let vim_markdown_preview_github=1
+
+" autocompletion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 " remap leader
 let mapleader = ","
 
 " lightline
+set laststatus=2
 let g:lightline = {
+			\ 'colorscheme': 'seoul256',
       \ 'component_function': {
       \   'filename': 'FilenameForLightline'
       \ }
@@ -53,6 +75,13 @@ map <C-L> <C-W>l<C-W>_
 
 " commenter
 autocmd FileType apache setlocal commentstring=#\ %s
+
+" YouCompleteMe dropdown color
+highlight Pmenu ctermbg=gray guibg=gray
+
+" vim-prettier
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#single_quote = 'true'
 
 " No arrows
 noremap <Up> <Nop>

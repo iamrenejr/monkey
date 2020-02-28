@@ -10,7 +10,9 @@
 	a = add
 	f = fetch
 	ps = push
-	pl = pull
+	pl = pull --rebase
+	cy = cherry-pick
+	cl = clone
 	co = checkout
 	cm = commit --message
 	st = status
@@ -18,3 +20,4 @@
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
+	tree = log --oneline --decorate --graph
