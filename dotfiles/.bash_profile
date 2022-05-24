@@ -40,8 +40,6 @@ alias fl='bundle exec fastlane read_dev_cert'
 export NVM_DIR="/Users/jorencalunsag/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # fzf via Homebrew
 if [ -e /usr/local/opt/fzf/shell/completion.bash ]; then
   source /usr/local/opt/fzf/shell/key-bindings.bash
@@ -67,3 +65,5 @@ if [ -x "$(command -v fzf)" ] && [ -x "$(command -v ag)" ]; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

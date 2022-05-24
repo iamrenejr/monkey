@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/local/mysql/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/renecalunsag/.oh-my-zsh"
@@ -120,7 +121,8 @@ export TERM=screen-256color
 alias e='exit'
 alias c='clear'
 alias l='ls -llarth'
-alias v='mvim -v'
+alias v='mvim -v -c ":NERDTreeToggle"'
+alias vdb='mvim -v -c ":DBUI"'
 alias relb='source ~/.bash_profile'
 alias eb='v ~/.bash_profile && relb'
 alias ev='v ~/.vimrc'
@@ -133,7 +135,10 @@ alias gfp='g f --all && g pl'
 alias mux='tmuxinator'
 alias glog='g log'
 alias gcl='g co -- . && g clean --force'
-alias rnreset='rm -rf node_modules && npm i && cd ios && pod install && cd ..'
+alias rndelete='rm -rf node_modules && rm -rf package-lock.json && cd ios && rm -rf Podfile.lock && rm -rf Pods && cd ..'
+alias rninstall='npm i && cd ios && pod install && cd ..'
+alias rnreset='rndelete && rninstall'
+alias grev='g revert --no-edit'
 
 # Set fzf installation directory path
 export FZF_BASE=/usr/local/bin/fzf
@@ -142,17 +147,19 @@ export FZF_BASE=/usr/local/bin/fzf
 alias android_remote_menu='adb shell input keyevent 82'
 
 # fastlane
-alias fl='bundle exec fastlane read_dev_cert'
+alias fl='bundle exec fastlane read_dev_cert --env rnd'
+
+# This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # PyEnv
 export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export NVM_DIR="/Users/jorencalunsag/.nvm"
+export NVM_DIR="/Users/renecalunsag/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -171,3 +178,8 @@ chist () {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"

@@ -1,18 +1,6 @@
 https://github.com/VundleVim/Vundle.vim.git
-https://github.com/ycm-core/YouCompleteMe.git
-https://github.com/PythonCharmers/python-future
-https://github.com/ross/requests-futures
-https://github.com/certifi/python-certifi
-https://github.com/chardet/chardet
-https://github.com/kjd/idna
-https://github.com/requests/requests
-https://github.com/urllib3/urllib3
-https://github.com/ycm-core/ycmd
 https://github.com/mileszs/ack.vim.git
-https://github.com/dense-analysis/ale.git
-https://github.com/dense-analysis/ale.git
 https://github.com/raimondi/delimitmate
-https://github.com/junegunn/fzf.vim.git
 https://github.com/othree/javascript-libraries-syntax.vim.git
 https://github.com/maximbaz/lightline-ale.git
 https://github.com/itchyny/lightline.vim
@@ -29,5 +17,6 @@ https://github.com/JamshedVesuna/vim-markdown-preview.git
 https://github.com/mustache/vim-mustache-handlebars.git
 https://github.com/prettier/vim-prettier
 https://github.com/tpope/vim-surround.git
+https://github.com/evanleck/vim-svelte.git
 https://github.com/christoomey/vim-tmux-navigator.git
 https://github.com/tpope/vim-unimpaired.git
